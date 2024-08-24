@@ -1,0 +1,62 @@
+.sidebar {
+  background-color: var(--gray-800);
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  .cover {
+    height: 7.2rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Para ficar no topo sobreposto */
+    /* podemos também aplicar apenas uma margin -3.2rem. Como queremos usar margem negativa, usamos 0px - para fazer o cálculo.*/
+    margin-top: calc(0px - 2rem - 6px);
+
+    strong {
+      line-height: 2.6rem;
+      color: var(--gray-100);
+    }
+
+    span {
+      color: var(--gray-400);
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  footer {
+    border-top: 1px solid var(--gray-600);
+    margin-top: 2.4rem;
+    padding: 2.4rem 3.2rem 3.2rem;
+
+    a {
+      background-color: transparent;
+      color: var(--green-500);
+      border: 1px solid var(--green-500);
+      border-radius: 0.8rem;
+      height: 4.8rem;
+      padding: 0 2.4rem;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      transition: background-color 0.1s, color 0.1s;
+
+      &:hover {
+        background-color: var(--green-500);
+        color: var(--white);
+      }
+    }
+  }
+}
